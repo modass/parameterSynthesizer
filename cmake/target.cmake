@@ -9,11 +9,7 @@ message(STATUS Library Sources: ${lib_sources})
 message(STATUS Client Header: ${cli_header})
 message(STATUS Library Header: ${lib_header})
 
-add_library(synthesizer SHARED
-    ${lib_sources}
-)
-
-add_library(synthesizer_static STATIC
+add_library(synthesizer INTERFACE
     ${lib_sources}
 )
 
@@ -23,4 +19,5 @@ add_executable(synthesizer-cli
 
 target_link_libraries(synthesizer-cli
     synthesizer
+    ${Boost_LIBRARIES}
 )

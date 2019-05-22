@@ -6,4 +6,6 @@ message(STATUS Source dir: ${CMAKE_SOURCE_DIR})
 
 include(${CMAKE_SOURCE_DIR}/cmake/config.cmake)
 
+include(${CMAKE_SOURCE_DIR}/cmake/resources.cmake)
+
 include(${CMAKE_SOURCE_DIR}/cmake/target.cmake)

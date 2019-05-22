@@ -1,17 +1,18 @@
 #pragma once
 #include "Coordinate.h"
+#include "Subdivision.h"
 #include "../types.h"
 
 #include <optional>
 
 namespace synthesizer {
 
-template<typename Tool>
+template<Subdivision& subdiv>
 class Grid {
     private:
     public:
 
-    std::optional<State> getState(const Coordinate<Tool>& coord);
+    std::optional<State> getState(const Coordinate<subdiv>& coord);
 
 };
 
